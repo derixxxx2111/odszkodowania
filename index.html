@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominik Rogowski - odszkodowania</title>
+<meta name="description" content="Sprawdzam, czy należą Ci się pieniądze: słup na działce, kredyt konsumencki, świadczenie wspierające. Zostaw numer - oddzwonię.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grafit:#1B2333; --off:#F8F5F1; --czerwien:#D63637; --indygo:#240082;
+  --granat:#283444; --bez:#DDCCB8; --zielen:#318244; --zielen-j:#58BB5D;
+  --tekst:#1B2333; --szary:#5b6372; --linia:#d9d3ca; --tlo:#F8F5F1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--tlo);color:var(--tekst);line-height:1.55;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{background:var(--grafit);color:var(--off);padding:28px 0 64px}
+.syg{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;display:flex;gap:12px;align-items:center}
+.syg b{color:var(--bez);font-weight:600}
+.syg span{border-left:1px solid #ffffff40;padding-left:12px;opacity:.8}
+.hero h1{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(46px,9vw,104px);line-height:.95;margin:56px 0 24px;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--bez)}
+.hero p.lead{font-size:clamp(18px,2.3vw,22px);max-width:640px;opacity:.92}
+.akcenty{display:flex;height:6px;margin-top:44px;max-width:220px}
+.akcenty i{flex:1}
+.btn{display:inline-block;margin-top:32px;background:var(--off);color:var(--grafit);font-weight:700;text-decoration:none;padding:16px 26px;font-size:17px;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--bez)}
+
+section{padding:64px 0}
+h2{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5vw,48px);line-height:1;margin-bottom:28px}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--szary);margin-bottom:10px}
+
+/* USLUGI - wiersze z kreska, bez kart */
+.usl{border-top:2px solid var(--grafit)}
+.usl-w{display:grid;grid-template-columns:8px 1fr;gap:0 22px;padding:26px 0;border-bottom:1px solid var(--linia)}
+.usl-w .pas{grid-row:span 2}
+.usl-w h3{font-size:21px;font-weight:700;line-height:1.3}
+.usl-w h3 small{display:block;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--szary);margin-bottom:4px}
+.usl-w p{color:#2f3746;margin-top:8px;max-width:720px}
+.usl-w .zr{font-size:14px;color:var(--szary);margin-top:8px}
+.takze{margin-top:22px;color:#2f3746}
+
+/* PROCES */
+.proces{background:#EFEAE3}
+.kroki{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.krok .nr{font-family:Anton,Impact,sans-serif;font-size:56px;line-height:1;color:var(--czerwien)}
+.krok h3{font-size:19px;margin:10px 0 6px}
+.krok p{color:#2f3746}
+
+/* UCZCIWIE */
+.uczc{max-width:760px}
+.uczc li{list-style:none;padding:12px 0 12px 26px;border-bottom:1px solid var(--linia);position:relative}
+.uczc li:before{content:"-";position:absolute;left:4px;font-weight:700}
+
+/* FORMULARZ */
+.form-sek{background:var(--grafit);color:var(--off)}
+.form-sek .kicker{color:var(--bez)}
+.form-sek .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.form-sek p{opacity:.9}
+.tel{font-family:Anton,Impact,sans-serif;font-size:40px;letter-spacing:.02em;text-decoration:none;display:inline-block;margin-top:18px;color:var(--bez)}
+form label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+form .pole{margin-bottom:18px}
+form input[type=text],form input[type=tel],form input[type=email]{width:100%;padding:14px 14px;font-size:17px;font-family:inherit;border:2px solid transparent;background:var(--off);color:var(--grafit);outline:none}
+form input:focus{border-color:var(--bez)}
+.zgoda{display:flex;gap:12px;font-size:13px;line-height:1.45;opacity:.9;margin:6px 0 22px;align-items:flex-start}
+.zgoda input{width:20px;height:20px;flex:0 0 20px;margin-top:1px;accent-color:var(--bez)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+form .btn{margin-top:0;width:100%}
+form .btn[disabled]{opacity:.6;cursor:wait}
+.komunikat{margin-top:16px;font-weight:600;min-height:1.5em}
+.komunikat.blad{color:#ffb4b4}
+.dzieki{display:none;border-left:6px solid var(--zielen-j);padding:18px 20px;background:#ffffff10}
+.dzieki h3{font-size:22px;margin-bottom:6px}
+
+footer{background:#121826;color:#c9ccd3;font-size:13px;padding:36px 0 44px;line-height:1.6}
+footer h4{color:var(--off);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+footer p+p{margin-top:8px}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero h1{margin-top:40px}
+  .kroki{grid-template-columns:1fr;gap:24px}
+  .form-sek .grid{grid-template-columns:1fr;gap:32px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="syg"><b>Dominik Rogowski</b><span>Odszkodowania</span></div>
+    <h1>Sprawdzam, gdzie leżą <em>Twoje pieniądze</em></h1>
+    <p class="lead">Pomagam odzyskać pieniądze, które się należą - a o których ludzie często nawet nie wiedzą. Zostaw numer, oddzwonię i powiem wprost, czy masz podstawę. Także wtedy, gdy odpowiedź brzmi „nie”.</p>
+    <a class="btn" href="#kontakt">Proszę o telefon</a>
+    <div class="akcenty"><i style="background:var(--czerwien)"></i><i style="background:var(--bez)"></i><i style="background:var(--zielen-j)"></i></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">W czym pomagam</div>
+    <h2>Najczęstsze sprawy</h2>
+    <div class="usl">
+      <div class="usl-w">
+        <div class="pas" style="background:var(--czerwien)"></div>
+        <h3><small>Służebność przesyłu</small>Słup, linia albo gazociąg na Twojej działce</h3>
+        <div>
+          <p>Firma energetyczna albo gazowa korzysta z Twojego gruntu. Należy się za to wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, co do zasady do 10 lat wstecz. To roszczenie z każdym rokiem traci jeden rok, więc zwlekanie kosztuje.</p>
+          <p class="zr">Wysokość zależy od rodzaju urządzenia, zajętej powierzchni i okresu - wycenia biegły. Orzecznictwo jest dziś dla właścicieli korzystniejsze niż wcześniej (TK, 2.12.2025, sygn. P 10/16; SN, 19.03.2026, sygn. II CSKP 1045/24), choć sądy stosują je jeszcze niejednolicie.</p>
+        </div>
+      </div>
+      <div class="usl-w">
+        <div class="pas" style="background:var(--bez)"></div>
+        <h3><small>Sankcja kredytu darmowego</small>Kredyt gotówkowy, ratalny albo konsolidacyjny</h3>
+        <div>
+          <p>Jeśli bank popełnił w umowie błąd, który przewiduje ustawa, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. Dotyczy kredytów spłacanych teraz albo spłaconych nie dawniej niż rok temu.</p>
+          <p class="zr">Podstawa: art. 45 ustawy o kredycie konsumenckim. Czy błąd jest, wychodzi dopiero po analizie konkretnej umowy.</p>
+        </div>
+      </div>
+      <div class="usl-w">
+        <div class="pas" style="background:var(--granat)"></div>
+        <h3><small>Koszty kredytu</small>Kredyt spłacony przed terminem</h3>
+        <div>
+          <p>Przy wcześniejszej spłacie bank powinien oddać proporcjonalną część kosztów, także prowizji pobranej na starcie. Często tego nie robi.</p>
+          <p class="zr">TSUE, 11.09.2019, sygn. C-383/18.</p>
+        </div>
+      </div>
+      <div class="usl-w">
+        <div class="pas" style="background:var(--zielen)"></div>
+        <h3><small>Świadczenie wspierające</small>Pieniądze dla osoby z niepełnosprawnością</h3>
+        <div>
+          <p>Comiesięczne świadczenie dla osób pełnoletnich, zależne od liczby punktów w decyzji o poziomie potrzeby wsparcia. Pomagam przejść przez procedurę.</p>
+          <p class="zr">Wniosek można też złożyć samodzielnie i za darmo - mówię o tym każdemu.</p>
+        </div>
+      </div>
+    </div>
+    <p class="takze">Sprawdzam też kredyty walutowe (CHF, EUR, USD), szkody na zdrowiu po wypadkach (na osobie, nie na pojeździe) i szkody górnicze.</p>
+  </div>
+</section>
+
+<section class="proces">
+  <div class="wrap">
+    <div class="kicker">Jak to wygląda</div>
+    <h2>Od telefonu do sprawy</h2>
+    <div class="kroki">
+      <div class="krok"><div class="nr">1</div><h3>Zostawiasz numer</h3><p>Imię, telefon, e-mail. Nic więcej na start nie potrzebuję.</p></div>
+      <div class="krok"><div class="nr">2</div><h3>Oddzwaniam</h3><p>Zadaję kilka pytań i mówię, czy widzę podstawę. Jeśli nie widzę, słyszysz to od razu.</p></div>
+      <div class="krok"><div class="nr">3</div><h3>Sprawę prowadzi Votum S.A.</h3><p>Wyspecjalizowana firma odszkodowawcza, z którą współpracuję. Ja zostaję Twoim kontaktem przez całą drogę.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Uczciwie</div>
+    <h2>Zanim zadzwonię</h2>
+    <ul class="uczc">
+      <li>Nie jestem prawnikiem ani pracownikiem Votum S.A. Współpracuję z nimi, a sprawę prowadzą ich specjaliści.</li>
+      <li>Nie obiecuję kwoty, wygranej ani terminu wypłaty. Kwotę wycenia biegły albo wynika ona z konkretnej umowy, czas zależy od sądu.</li>
+      <li>Jeśli sprawa nie ma sensu, powiem to wprost. Wolę stracić sprawę niż Twoje zaufanie.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="form-sek" id="kontakt">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">Kontakt</div>
+      <h2>Oddzwonię</h2>
+      <p>Zostaw dane, a oddzwonię. Wolisz sam zadzwonić? Śmiało.</p>
+      <a class="tel" href="tel:+48799270512">799 270 512</a>
+    </div>
+    <div>
+      <form id="form" novalidate>
+        <div class="pole"><label for="imie">Imię</label><input id="imie" name="imie" type="text" autocomplete="given-name" maxlength="60" required></div>
+        <div class="pole"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="np. 600 100 200" maxlength="20" required></div>
+        <div class="pole"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+        <div class="hp" aria-hidden="true"><label for="firma">Firma</label><input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Chcę, żeby Dominik Rogowski skontaktował się ze mną telefonicznie lub mailowo w sprawie możliwego odszkodowania. Zasady przetwarzania danych są opisane na dole strony.</span></label>
+        <button class="btn" type="submit" id="wyslij">Proszę o telefon</button>
+        <div class="komunikat" id="kom" role="status" aria-live="polite"></div>
+      </form>
+      <div class="dzieki" id="dzieki"><h3>Dzięki, mam Twoje dane.</h3><p>Oddzwonię z numeru 799 270 512 - odbierz, proszę, nieznany numer.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h4>Twoje dane</h4>
+    <p>Administratorem danych podanych w formularzu (imię, telefon, e-mail) jest MDNDR sp. z o.o. z siedzibą w Warszawie, al. Jana Pawła II 43A/37B, 01-001 Warszawa, KRS 0001027901, NIP 5273049580. Dane przetwarzam wyłącznie po to, żeby się z Tobą skontaktować w sprawie, o którą pytasz (art. 6 ust. 1 lit. a RODO - Twoja zgoda). Jeśli zdecydujesz się na sprawę, dane trafią do Votum S.A., która ją poprowadzi.</p>
+    <p>Dane przechowuję do zakończenia kontaktu, a jeśli nie dojdzie do współpracy - najdłużej 12 miesięcy. Masz prawo do wglądu w dane, ich poprawienia, usunięcia, ograniczenia przetwarzania, przeniesienia i cofnięcia zgody w każdej chwili, a także do skargi do Prezesa UODO. Wystarczy wiadomość na <a href="mailto:dominik.rogowski@votum-ds.pl">dominik.rogowski@votum-ds.pl</a> albo telefon 799 270 512.</p>
+    <p style="margin-top:18px;opacity:.7">© 2026 Dominik Rogowski</p>
+  </div>
+</footer>
+
+<script>
+const URL_FORMULARZA = 'https://script.google.com/macros/s/AKfycbx4vyEYUEfyeYhoI5encN7krPFOYfV6ZQRQ7Us96q8meTYY9zcDGpglety3LK5-4okn0g/exec';
+const f = document.getElementById('form'), kom = document.getElementById('kom'), btn = document.getElementById('wyslij');
+
+// Skad przyszedl czlowiek: znaczniki UTM, klik z reklamy/posta FB (fbclid) albo strona odsylajaca.
+function skad(){
+  const q = new URLSearchParams(location.search), czesci = [];
+  const utm = ["utm_source","utm_medium","utm_campaign","utm_content"].map(k => q.get(k)).filter(Boolean);
+  if (utm.length) czesci.push("utm: " + utm.join(" / "));
+  if (q.get("fbclid")) czesci.push("facebook (fbclid)");
+  if (document.referrer && !document.referrer.startsWith(location.origin)) czesci.push("z: " + document.referrer.split("?")[0]);
+  return (czesci.join(", ") || "bezpośrednio").slice(0, 300);
+}
+function blad(t, pole){ kom.textContent = t; kom.className = 'komunikat blad'; if (pole) document.getElementById(pole).focus(); }
+
+f.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const dane = {
+    imie: f.imie.value.trim(),
+    telefon: f.telefon.value.trim(),
+    email: f.email.value.trim(),
+    zgoda: f.querySelector('#zgoda').checked,
+    firma: f.firma.value,
+    skad: skad()
+  };
+  const tel = dane.telefon.replace(/[^\d+]/g, '').replace(/^(\+48|0048)/, '');
+  if (dane.imie.length < 2) return blad('Wpisz imię.', 'imie');
+  if (!/^\d{9}$/.test(tel)) return blad('Numer telefonu powinien mieć 9 cyfr.', 'telefon');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dane.email)) return blad('Sprawdź adres e-mail.', 'email');
+  if (!dane.zgoda) return blad('Zaznacz zgodę na kontakt.', 'zgoda');
+
+  btn.disabled = true; btn.textContent = 'Wysyłam...'; kom.textContent = ''; kom.className = 'komunikat';
+  try {
+    const r = await fetch(URL_FORMULARZA, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(dane), signal: AbortSignal.timeout(20000) });
+    const w = await r.json();
+    if (!w.ok) throw Object.assign(new Error(w.blad || 'Nie udało się zapisać.'), { odSerwera: true });
+    f.style.display = 'none';
+    document.getElementById('dzieki').style.display = 'block';
+  } catch (err) {
+    blad(err && err.odSerwera ? err.message : 'Coś poszło nie tak. Zadzwoń: 799 270 512.');
+    btn.disabled = false; btn.textContent = 'Proszę o telefon';
+  }
+});
+</script>
+</body>
+</html>
