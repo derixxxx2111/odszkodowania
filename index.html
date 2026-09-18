@@ -117,6 +117,7 @@ section h2.tytul{font-size:clamp(34px,4.6vw,56px);margin-bottom:14px}
 .sprawa h3{font-size:22px;line-height:1.3;margin:8px 0 10px;font-weight:750}
 .sprawa p{color:var(--tekst);opacity:.86}
 .sprawa .zr{font-size:14px;color:var(--szary);opacity:1;margin-top:12px;padding-top:12px;border-top:1px solid var(--linia)}
+.sprawa:last-child:nth-child(odd){grid-column:1/-1}
 .takze{margin-top:24px;color:var(--szary)}
 .takze b{color:var(--tekst)}
 
@@ -186,7 +187,7 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
 <header class="gora">
   <div class="wrap">
     <div class="pasek">
-      <div class="syg">Dominik Rogowski<span>Odszkodowania</span></div>
+      <div class="syg">Dominik Rogowski</div>
       <a href="mailto:dominik.rogowski@votum-ds.pl" aria-label="Napisz: dominik.rogowski@votum-ds.pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span class="tel-tekst">dominik.rogowski@votum-ds.pl</span></a>
     </div>
 
@@ -196,9 +197,9 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
         <h1 class="tytul">Sprawdzam, gdzie leżą <em>Twoje pieniądze</em></h1>
         <p class="lead">Pomagam odzyskać pieniądze, które się należą - a o których ludzie często nawet nie wiedzą. <b>Zostaw numer, oddzwonię i powiem wprost, czy masz podstawę.</b> Także wtedy, gdy odpowiedź brzmi „nie”.</p>
         <ul class="uslugi" aria-label="W czym pomagam">
-          <li><b>Słup, linia albo gazociąg na działce</b><span>Wynagrodzenie za korzystanie z gruntu, co do zasady do 10 lat wstecz.</span></li>
+          <li><b>Słup, linia albo gazociąg na działce</b><span>Wynagrodzenie za korzystanie z gruntu, do 6 lat wstecz.</span></li>
           <li><b>Kredyt gotówkowy lub ratalny</b><span>Błąd banku w umowie = oddajesz tylko kapitał, bez odsetek i prowizji.</span></li>
-          <li><b>Kredyt we frankach, euro, dolarach</b><span>Sprawdzam umowę kredytu walutowego.</span></li>
+          <li><b>Kredyt we frankach, euro, dolarach</b><span>Umowa mogła zawierać niedozwolone klauzule.</span></li>
           <li><b>Kredyt spłacony przed terminem</b><span>Zwrot części kosztów i prowizji, której bank często nie oddaje.</span></li>
           <li><b>Świadczenie wspierające</b><span>Comiesięczne pieniądze dla dorosłej osoby z niepełnosprawnością.</span></li>
           <li><b>Wypadki i szkody górnicze</b><span>Szkody na zdrowiu po wypadku (na osobie) i szkody górnicze.</span></li>
@@ -212,21 +213,21 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
 
       <div class="karta" id="formularz">
         <form id="form" novalidate>
-          <h2>Zostaw numer - oddzwonię</h2>
-          <p class="pod">Trzy pola. Nic więcej na start nie potrzebuję.</p>
+          <h2>Bezpłatna konsultacja</h2>
+          <p class="pod">Zostaw kontakt - oddzwonię. Trzy pola, nic więcej.</p>
           <div class="pole"><label for="imie">Imię</label><input id="imie" name="imie" type="text" autocomplete="given-name" autocapitalize="words" maxlength="60" required></div>
           <div class="pole"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="600 100 200" maxlength="20" required></div>
           <div class="pole"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="120" required></div>
           <div class="hp" aria-hidden="true"><label for="firma">Firma</label><input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off"></div>
-          <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Chcę, żeby Dominik Rogowski skontaktował się ze mną telefonicznie lub mailowo w sprawie możliwego odszkodowania. Zasady przetwarzania danych są <a href="#dane">na dole strony</a>.</span></label>
+          <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Zgadzam się na kontakt telefoniczny i mailowy w sprawie bezpłatnej konsultacji. <a href="#dane">Zasady ochrony danych</a></span></label>
           <button class="btn btn-glowny" type="submit" id="wyslij">Proszę o telefon</button>
           <div class="komunikat" id="kom" role="status" aria-live="polite"></div>
-          <div class="zaufanie"><span>Bez zobowiązań</span><span>Oddzwaniam osobiście</span></div>
+          <div class="zaufanie"><span>Bezpłatna konsultacja</span><span>Bez zobowiązań</span><span>Oddzwaniam osobiście</span></div>
         </form>
         <div class="dzieki" id="dzieki" tabindex="-1">
           <div class="ok" aria-hidden="true">✓</div>
           <h2>Dzięki, mam Twoje dane.</h2>
-          <p>Oddzwonię z numeru <b>799 270 512</b> - odbierz, proszę, nieznany numer. Za chwilę dostaniesz też SMS z potwierdzeniem.</p>
+          <p>Oddzwonię najszybciej, jak to możliwe - odbierz, proszę, nieznany numer. Za chwilę dostaniesz też SMS z potwierdzeniem.</p>
         </div>
       </div>
     </div>
@@ -243,14 +244,20 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
       <article class="sprawa">
         <div class="etyk">Służebność przesyłu</div>
         <h3>Słup, linia albo gazociąg na Twojej działce</h3>
-        <p>Firma energetyczna albo gazowa korzysta z Twojego gruntu. Należy się za to wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, co do zasady do 10 lat wstecz. To roszczenie z każdym rokiem traci jeden rok, więc zwlekanie kosztuje.</p>
-        <p class="zr">Wysokość zależy od rodzaju urządzenia, zajętej powierzchni i okresu - wycenia biegły. Orzecznictwo jest dziś dla właścicieli korzystniejsze niż wcześniej (TK, 2.12.2025, sygn. P 10/16; SN, 19.03.2026, sygn. II CSKP 1045/24), choć sądy stosują je jeszcze niejednolicie.</p>
+        <p>Firma energetyczna albo gazowa korzysta z Twojego gruntu. Należy się za to wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, do 6 lat wstecz. Nie zwlekaj - roszczenie może się przedawnić w 2028 r.</p>
+        <p class="zr">Wysokość zależy od wielkości i długości infrastruktury na działce oraz wartości gruntu. Orzecznictwo jest dziś dla właścicieli korzystniejsze niż wcześniej (TK, 2.12.2025, sygn. P 10/16; SN, 19.03.2026, sygn. II CSKP 1045/24).</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Sankcja kredytu darmowego</div>
         <h3>Kredyt gotówkowy, ratalny albo konsolidacyjny</h3>
-        <p>Jeśli bank popełnił w umowie błąd, który przewiduje ustawa, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. Dotyczy kredytów spłacanych teraz albo spłaconych nie dawniej niż rok temu.</p>
+        <p>Jeśli bank popełnił w umowie błąd, który przewiduje ustawa, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. W Polsce szacuje się, że wadliwych umów kredytowych jest kilka milionów.</p>
         <p class="zr">Podstawa: art. 45 ustawy o kredycie konsumenckim. Czy błąd jest, wychodzi dopiero po analizie konkretnej umowy.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Kredyty walutowe</div>
+        <h3>Kredyt we frankach, euro albo dolarach</h3>
+        <p>Umowy kredytów powiązanych z walutą obcą często zawierały niedozwolone klauzule przeliczeniowe. Sprawdzam, czy Twoją umowę da się podważyć - także gdy kredyt jest już spłacony.</p>
+        <p class="zr">CHF, EUR, USD. Wynik zależy od zapisów konkretnej umowy.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Koszty kredytu</div>
@@ -259,13 +266,24 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
         <p class="zr">TSUE, 11.09.2019, sygn. C-383/18.</p>
       </article>
       <article class="sprawa">
+        <div class="etyk">Wypadki</div>
+        <h3>Szkoda na zdrowiu po wypadku</h3>
+        <p>Obrażenia po wypadku komunikacyjnym, w pracy albo w innym zdarzeniu. Sprawdzam, czy należy Ci się odszkodowanie i zadośćuczynienie.</p>
+        <p class="zr">Dotyczy szkód na osobie, nie na pojeździe.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Szkody górnicze</div>
+        <h3>Dom albo działka na terenie wydobycia</h3>
+        <p>Pęknięcia ścian, przechylony budynek, osiadanie albo podtapianie gruntu przez działalność kopalni. Sprawdzam, czy szkoda kwalifikuje się do odszkodowania.</p>
+        <p class="zr">Liczy się związek szkody z ruchem zakładu górniczego.</p>
+      </article>
+      <article class="sprawa">
         <div class="etyk">Świadczenie wspierające</div>
         <h3>Pieniądze dla osoby z niepełnosprawnością</h3>
         <p>Comiesięczne świadczenie dla osób pełnoletnich, zależne od liczby punktów w decyzji o poziomie potrzeby wsparcia. Pomagam przejść przez procedurę.</p>
         <p class="zr">Wniosek można też złożyć samodzielnie i za darmo - mówię o tym każdemu.</p>
       </article>
     </div>
-    <p class="takze"><b>Sprawdzam też</b> kredyty walutowe (CHF, EUR, USD), szkody na zdrowiu po wypadkach (na osobie, nie na pojeździe) i szkody górnicze.</p>
   </div>
 </section>
 
@@ -275,9 +293,9 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
     <h2 class="tytul">Od telefonu do sprawy</h2>
     <p class="wstep">Trzy kroki. Pierwszy zajmuje minutę.</p>
     <div class="kroki">
-      <div class="krok"><h3>Zostawiasz numer</h3><p>Imię, telefon, e-mail. Nic więcej na start nie potrzebuję.</p></div>
+      <div class="krok"><h3>Zostawiasz kontakt</h3><p>Imię, telefon, e-mail. Nic więcej na start nie potrzebuję.</p></div>
       <div class="krok"><h3>Oddzwaniam</h3><p>Zadaję kilka pytań i mówię, czy widzę podstawę. Jeśli nie widzę, słyszysz to od razu.</p></div>
-      <div class="krok"><h3>Sprawę prowadzi Votum S.A.</h3><p>Wyspecjalizowana firma odszkodowawcza, z którą współpracuję. Ja zostaję Twoim kontaktem przez całą drogę.</p></div>
+      <div class="krok"><h3>Resztą zajmujemy się my</h3><p>Dokumenty i formalności prowadzi Votum S.A., firma odszkodowawcza notowana na warszawskiej giełdzie, z którą współpracuję. Ja zostaję Twoim kontaktem przez całą drogę.</p></div>
     </div>
   </div>
 </section>
@@ -286,12 +304,13 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
   <div class="wrap omnie">
     <div class="foto-duze"><img src="img/dominik.webp" width="528" height="680" alt="Dominik Rogowski" loading="lazy"></div>
     <div>
-      <div class="kicker">Uczciwie</div>
-      <h2 class="tytul">Zanim zadzwonię</h2>
+      <div class="kicker">Jak pracuję</div>
+      <h2 class="tytul">Co dostajesz ode mnie</h2>
       <ul class="uczc">
-        <li><b>Nie jestem prawnikiem</b><span>ani pracownikiem Votum S.A. Współpracuję z nimi, a sprawę prowadzą ich specjaliści.</span></li>
-        <li><b>Nie obiecuję kwoty</b><span>wygranej ani terminu wypłaty. Kwotę wycenia biegły albo wynika ona z konkretnej umowy, czas zależy od sądu.</span></li>
-        <li><b>Mówię wprost</b><span>jeśli sprawa nie ma sensu. Wolę stracić sprawę niż Twoje zaufanie.</span></li>
+        <li><b>Bezpłatną konsultację</b><span>Sprawdzam Twoją sprawę bez opłat i bez zobowiązań.</span></li>
+        <li><b>Wycenę służebności już w rozmowie</b><span>Na podstawie wielkości i długości infrastruktury na działce oraz wartości gruntu.</span></li>
+        <li><b>Konkretną odpowiedź</b><span>Jeśli nie widzę podstawy, usłyszysz to przy pierwszej rozmowie - zanim cokolwiek podpiszesz.</span></li>
+        <li><b>Jedną osobę od początku do końca</b><span>Nie przerzucam Cię między działami. Przez całą sprawę rozmawiasz ze mną.</span></li>
       </ul>
     </div>
   </div>
@@ -302,10 +321,10 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
     <div class="kicker">Pytania</div>
     <h2 class="tytul">Zanim zostawisz numer</h2>
     <div class="faq">
-      <details><summary>Czy jesteś prawnikiem?</summary><p>Nie. Nie jestem też pracownikiem Votum S.A. Współpracuję z nimi: ja sprawdzam, czy jest podstawa, i jestem Twoim kontaktem, a sprawę prowadzą specjaliści Votum.</p></details>
-      <details><summary>Ile mogę dostać?</summary><p>Nie obiecuję kwoty. Przy służebności wysokość wycenia biegły i zależy od rodzaju urządzenia, zajętej powierzchni i okresu. Przy kredytach wynika z konkretnej umowy.</p></details>
-      <details><summary>Co, jeśli moja sprawa nie ma sensu?</summary><p>Powiem to wprost, od razu przy pierwszej rozmowie. Wolę stracić sprawę niż Twoje zaufanie.</p></details>
-      <details><summary>Jak długo to trwa?</summary><p>Nie podam terminu wypłaty, bo czas zależy od sądu. Przy służebności pamiętaj, że roszczenie z każdym rokiem traci jeden rok, więc zwlekanie kosztuje.</p></details>
+      <details><summary>Ile kosztuje konsultacja?</summary><p>Nic. Konsultacja jest bezpłatna i do niczego nie zobowiązuje.</p></details>
+      <details><summary>Ile mogę dostać?</summary><p>Nie obiecuję kwoty. Przy służebności wysokość wyceniam podczas rozmowy na podstawie wielkości i długości infrastruktury na działce oraz wartości gruntu. Przy kredytach wynika z konkretnej umowy.</p></details>
+      <details><summary>Co, jeśli moja sprawa nie ma sensu?</summary><p>Powiem to wprost, od razu przy pierwszej rozmowie - zanim cokolwiek podpiszesz.</p></details>
+      <details><summary>Jak długo to trwa?</summary><p>Nie podam terminu wypłaty, bo czas zależy od instytucji. Przy służebności nie zwlekaj - w 2028 r. możliwe jest zasiedzenie.</p></details>
       <details><summary>Co się stanie z moimi danymi?</summary><p>Służą tylko do kontaktu w Twojej sprawie. Jeśli zdecydujesz się na sprawę, trafią do Votum S.A., która ją poprowadzi. Szczegóły są <a href="#dane">na dole strony</a>.</p></details>
     </div>
   </div>
@@ -314,10 +333,10 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
 <section class="koniec">
   <div class="wrap">
     <h2 class="tytul">Sprawdźmy Twoją sprawę</h2>
-    <p>Zostaw numer albo zadzwoń sam. Jeśli nie odbiorę, oddzwonię.</p>
+    <p>Zostaw kontakt - oddzwonię i powiem wprost, czy masz podstawę.</p>
     <div class="przyciski">
-      <a class="btn btn-glowny" href="#formularz">Zostaw numer</a>
-      <a class="btn btn-drugi" href="tel:+48799270512"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>799 270 512</a>
+      <a class="btn btn-glowny" href="#formularz">Bezpłatna konsultacja</a>
+      <a class="btn btn-drugi" href="mailto:dominik.rogowski@votum-ds.pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Napisz maila</a>
     </div>
   </div>
 </section>
@@ -327,15 +346,14 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
   <div class="wrap">
     <h3>Twoje dane</h3>
     <p>Administratorem danych podanych w formularzu (imię, telefon, e-mail) jest MDNDR sp. z o.o. z siedzibą w Warszawie, al. Jana Pawła II 43A/37B, 01-001 Warszawa, KRS 0001027901, NIP 5273049580. Dane przetwarzam wyłącznie po to, żeby się z Tobą skontaktować w sprawie, o którą pytasz (art. 6 ust. 1 lit. a RODO - Twoja zgoda). Jeśli zdecydujesz się na sprawę, dane trafią do Votum S.A., która ją poprowadzi.</p>
-    <p>Dane przechowuję do zakończenia kontaktu, a jeśli nie dojdzie do współpracy - najdłużej 12 miesięcy. Masz prawo do wglądu w dane, ich poprawienia, usunięcia, ograniczenia przetwarzania, przeniesienia i cofnięcia zgody w każdej chwili, a także do skargi do Prezesa UODO. Wystarczy wiadomość na <a href="mailto:dominik.rogowski@votum-ds.pl">dominik.rogowski@votum-ds.pl</a> albo telefon 799 270 512.</p>
+    <p>Dane przechowuję do zakończenia kontaktu, a jeśli nie dojdzie do współpracy - najdłużej 12 miesięcy. Masz prawo do wglądu w dane, ich poprawienia, usunięcia, ograniczenia przetwarzania, przeniesienia i cofnięcia zgody w każdej chwili, a także do skargi do Prezesa UODO. Wystarczy wiadomość na <a href="mailto:dominik.rogowski@votum-ds.pl">dominik.rogowski@votum-ds.pl</a>.</p>
     <p>Strona nie używa plików cookies ani narzędzi śledzących.</p>
     <div class="stopka"><span>© 2026 Dominik Rogowski</span><a href="mailto:dominik.rogowski@votum-ds.pl">dominik.rogowski@votum-ds.pl</a></div>
   </div>
 </footer>
 
 <div class="dol" id="dol" aria-hidden="true">
-  <a class="btn btn-drugi" href="tel:+48799270512" tabindex="-1">Zadzwoń</a>
-  <a class="btn btn-glowny" href="#formularz" tabindex="-1">Zostaw numer</a>
+  <a class="btn btn-glowny" href="#formularz" tabindex="-1">Bezpłatna konsultacja</a>
 </div>
 
 <script>
@@ -385,7 +403,7 @@ f.addEventListener('submit', async (e) => {
     const d = document.getElementById('dzieki'); d.style.display = 'block'; d.focus();
   } catch (err) {
     clearTimeout(zegar);
-    blad(err && err.odSerwera ? err.message : 'Coś poszło nie tak. Zadzwoń: 799 270 512.');
+    blad(err && err.odSerwera ? err.message : 'Coś poszło nie tak. Napisz: dominik.rogowski@votum-ds.pl');
     btn.disabled = false; btn.textContent = 'Proszę o telefon';
   }
 });
