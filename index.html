@@ -232,14 +232,17 @@ f.addEventListener('submit', async (e) => {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dane.email)) return blad('Sprawdź adres e-mail.', 'email');
   if (!dane.zgoda) return blad('Zaznacz zgodę na kontakt.', 'zgoda');
 
-  btn.disabled = true; btn.textContent = 'Wysyłam...'; kom.textContent = ''; kom.className = 'komunikat';
+  btn.disabled = true; btn.textContent = 'Wysyłam...';
+  const zegar = setTimeout(() => { btn.textContent = 'Jeszcze chwila...'; }, 8000); kom.textContent = ''; kom.className = 'komunikat';
   try {
-    const r = await fetch(URL_FORMULARZA, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(dane), signal: AbortSignal.timeout(20000) });
+    const r = await fetch(URL_FORMULARZA, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(dane), signal: AbortSignal.timeout(45000) });
     const w = await r.json();
+    clearTimeout(zegar);
     if (!w.ok) throw Object.assign(new Error(w.blad || 'Nie udało się zapisać.'), { odSerwera: true });
     f.style.display = 'none';
     document.getElementById('dzieki').style.display = 'block';
   } catch (err) {
+    clearTimeout(zegar);
     blad(err && err.odSerwera ? err.message : 'Coś poszło nie tak. Zadzwoń: 799 270 512.');
     btn.disabled = false; btn.textContent = 'Proszę o telefon';
   }
