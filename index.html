@@ -180,6 +180,28 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
   .karta{padding:22px 18px}
   .dol{display:flex}
 }
+
+/* === ZMIANY TESTOWE === */
+.zaufanie{display:grid;gap:6px;justify-items:center;margin-top:14px;font-size:14px;color:var(--szary);text-align:center}
+.zaufanie span{display:block}
+.zaufanie span:before{content:none}
+.zaufanie svg{width:15px;height:15px;display:inline-block;vertical-align:-2px;margin-right:6px;color:#2e7d32}
+.karta .ja{margin-top:18px;padding-top:16px;border-top:1px solid var(--linia)}
+.podpowiedz{font-size:13px;color:var(--szary);margin-top:5px}
+.opc{font-weight:400;color:var(--szary)}
+.wiecej-btn{display:none}
+@media (max-width:760px){
+  .hero>div:first-child{display:contents}
+  .hero .kicker{order:1}.hero h1{order:2}.hero .lead{order:3}
+  .hero .karta{order:4}
+  .hero .uslugi{order:5}.hero .uslugi-wiecej{order:6}.hero .ja{order:7}
+  .hero{gap:0}
+  .hero .karta{margin:22px 0 28px}
+  .hero .lead .dopisek{display:none}
+  .sprawa.zwin p:not(.zr){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .sprawa.zwin p+p:not(.zr),.sprawa.zwin .zr{display:none}
+  .wiecej-btn{display:inline-block;margin-top:10px;background:none;border:0;padding:0;font:650 15px var(--font);color:var(--akcent-tekst);text-decoration:underline;cursor:pointer}
+}
 </style>
 </head>
 <body>
@@ -196,7 +218,7 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
       <div>
         <div class="kicker" style="color:var(--akcent-hero,var(--akcent))">Służebność przesyłu · kredyty · świadczenia</div>
         <h1 class="tytul">Sprawdzam, gdzie leżą <em>Twoje pieniądze</em></h1>
-        <p class="lead">Pomagam odzyskać pieniądze, które się należą - a o których ludzie często nawet nie wiedzą. <b>Zostaw numer, oddzwonię i powiem wprost, czy masz podstawę.</b> Także wtedy, gdy odpowiedź brzmi „nie”.</p>
+        <p class="lead">Pomagam odzyskać pieniądze, które się należą - a o których ludzie często nawet nie wiedzą. <b>Zostaw numer, oddzwonię i powiem wprost, czy masz podstawę.</b><span class="dopisek"> Także wtedy, gdy odpowiedź brzmi „nie”.</span></p>
         <ul class="uslugi" aria-label="W czym pomagam">
           <li><b>Słup, linia albo gazociąg na działce</b><span>Wynagrodzenie za korzystanie z gruntu, do 6 lat wstecz.</span></li>
           <li><b>Kredyt gotówkowy lub ratalny</b><span>Błąd banku w umowie = oddajesz tylko kapitał, bez odsetek i prowizji.</span></li>
@@ -206,25 +228,25 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
           <li><b>Wypadki i szkody górnicze</b><span>Szkody na zdrowiu po wypadku (na osobie) i szkody górnicze.</span></li>
         </ul>
         <a class="uslugi-wiecej" href="#sprawy">Szczegóły każdej sprawy ↓</a>
-        <div class="ja">
-          <div class="foto"><img src="img/dominik-twarz.webp" width="160" height="160" alt="Dominik Rogowski"></div>
-          <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu.</p>
-        </div>
       </div>
 
       <div class="karta" id="formularz">
         <form id="form" novalidate>
           <h2>Bezpłatna konsultacja</h2>
-          <p class="pod">Zostaw kontakt - oddzwonię. Trzy pola, nic więcej.</p>
+          <p class="pod">Zostaw imię i numer - oddzwonię.</p>
           <div class="pole"><label for="imie">Imię</label><input id="imie" name="imie" type="text" autocomplete="given-name" autocapitalize="words" maxlength="60" required></div>
-          <div class="pole"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="600 100 200" maxlength="20" required></div>
-          <div class="pole"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="120" required></div>
+          <div class="pole"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="600 100 200" maxlength="20" required><div class="podpowiedz">Tylko po to, żeby umówić bezpłatną rozmowę.</div></div>
+          <div class="pole"><label for="email">E-mail <span class="opc">(opcjonalnie)</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="120"></div>
           <div class="hp" aria-hidden="true"><label for="firma">Firma</label><input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off"></div>
-          <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Zgadzam się na kontakt telefoniczny i mailowy w sprawie bezpłatnej konsultacji. <a href="#dane">Zasady ochrony danych</a></span></label>
-          <button class="btn btn-glowny" type="submit" id="wyslij">Proszę o telefon</button>
+          <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Zgadzam się na kontakt telefoniczny, SMS i mailowy w sprawie bezpłatnej konsultacji. <a href="#dane">Zasady ochrony danych</a></span></label>
+          <button class="btn btn-glowny" type="submit" id="wyslij">Umawiam bezpłatną konsultację</button>
           <div class="komunikat" id="kom" role="status" aria-live="polite"></div>
-          <div class="zaufanie"><span>Bezpłatna konsultacja</span><span>Bez zobowiązań</span><span>Oddzwaniam osobiście</span></div>
+          <div class="zaufanie"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3z"/></svg>Twoje dane są bezpieczne</span><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Bez zobowiązań - po rozmowie to Ty decydujesz</span></div>
         </form>
+        <div class="ja">
+          <div class="foto"><img src="img/dominik-twarz.webp" width="160" height="160" alt="Dominik Rogowski"></div>
+          <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu.</p>
+        </div>
         <div class="dzieki" id="dzieki" tabindex="-1">
           <div class="ok" aria-hidden="true">✓</div>
           <h2>Dziękuję za zgłoszenie.</h2>
@@ -389,7 +411,7 @@ f.addEventListener('submit', async (e) => {
   const tel = dane.telefon.replace(/[^\d+]/g, '').replace(/^(\+48|0048)/, '');
   if (dane.imie.length < 2) return blad('Wpisz imię.', 'imie');
   if (!/^\d{9}$/.test(tel)) return blad('Numer telefonu powinien mieć 9 cyfr.', 'telefon');
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dane.email)) return blad('Sprawdź adres e-mail.', 'email');
+  if (dane.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dane.email)) return blad('Sprawdź adres e-mail.', 'email');
   if (!dane.zgoda) return blad('Zaznacz zgodę na kontakt.', 'zgoda');
   blad('');  kom.className = 'komunikat';
 
@@ -405,7 +427,7 @@ f.addEventListener('submit', async (e) => {
   } catch (err) {
     clearTimeout(zegar);
     blad(err && err.odSerwera ? err.message : 'Coś poszło nie tak. Napisz: dominik.rogowski@votum-ds.pl');
-    btn.disabled = false; btn.textContent = 'Proszę o telefon';
+    btn.disabled = false; btn.textContent = 'Umawiam bezpłatną konsultację';
   }
 });
 
@@ -414,6 +436,13 @@ const dol = document.getElementById('dol'), karta = document.getElementById('for
 if ('IntersectionObserver' in window) {
   new IntersectionObserver(([w]) => dol.classList.toggle('widac', !w.isIntersecting && w.boundingClientRect.top < 0), { threshold: 0 }).observe(karta);
 }
+
+document.querySelectorAll('.sprawa').forEach((a,i) => {
+  a.classList.add('zwin');
+  const b = document.createElement('button'); b.type='button'; b.className='wiecej-btn'; b.textContent='Czytaj więcej';
+  b.onclick = () => { a.classList.toggle('zwin'); b.textContent = a.classList.contains('zwin') ? 'Czytaj więcej' : 'Zwiń'; };
+  a.appendChild(b);
+});
 </script>
 </body>
 </html>
