@@ -18,7 +18,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b3261e'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='19' fill='%23fff' text-anchor='middle'%3EDR%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="img/dominik-twarz.webp" as="image" type="image/webp">
+<link rel="preload" href="img/dominik-avatar.webp" as="image" type="image/webp">
 <style>
 @font-face{font-family:Inter;src:url(fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:Inter;src:url(fonts/inter-ext.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -71,7 +71,7 @@ a{color:inherit}
 .hero .lead b{color:var(--hero-tekst);font-weight:600}
 .ja{display:flex;gap:16px;align-items:center;margin-top:30px}
 .ja .foto{width:76px;height:76px;border-radius:50%;overflow:hidden;background:var(--tlo-2);flex:0 0 76px}
-.ja .foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.2) translateY(-6%)}
+.ja .foto img{width:100%;height:100%;object-fit:cover}
 .ja p{font-size:15px;line-height:1.45;color:var(--hero-szary)}
 .ja p b{display:block;color:var(--hero-tekst);font-size:17px}
 .uslugi{list-style:none;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
@@ -220,11 +220,11 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
         <h1 class="tytul">Sprawdzam, gdzie leżą <em>Twoje pieniądze</em></h1>
         <p class="lead">Pomagam odzyskać pieniądze, które się należą - a o których ludzie często nawet nie wiedzą. <b>Zostaw numer, oddzwonię i powiem wprost, czy masz podstawę.</b><span class="dopisek"> Także wtedy, gdy odpowiedź brzmi „nie”.</span></p>
         <ul class="uslugi" aria-label="W czym pomagam">
-          <li><b>Słup, linia albo gazociąg na działce</b><span>Wynagrodzenie za korzystanie z gruntu, do 6 lat wstecz.</span></li>
-          <li><b>Kredyt gotówkowy lub ratalny</b><span>Błąd banku w umowie = oddajesz tylko kapitał, bez odsetek i prowizji.</span></li>
+          <li><b>Słup, linia albo gazociąg na działce</b><span>Wynagrodzenie za korzystanie z gruntu do 6 lat wstecz i za obniżenie wartości nieruchomości.</span></li>
+          <li><b>Kredyt gotówkowy lub konsolidacyjny</b><span>Błąd banku w umowie = oddajesz tylko kapitał, bez odsetek i prowizji.</span></li>
           <li><b>Kredyt we frankach, euro, dolarach</b><span>Umowa mogła zawierać niedozwolone klauzule.</span></li>
           <li><b>Odsetki od kosztów kredytu</b><span>Bank nie mógł naliczać odsetek od prowizji i ubezpieczenia doliczonych do kredytu.</span></li>
-          <li><b>Świadczenie wspierające</b><span>Comiesięczne pieniądze dla dorosłej osoby z niepełnosprawnością.</span></li>
+          <li><b>Świadczenie wspierające</b><span>Od 792 zł do 4 353 zł miesięcznie dla dorosłej osoby z niepełnosprawnością.</span></li>
           <li><b>Wypadki i szkody górnicze</b><span>Szkody na zdrowiu po wypadku (na osobie) i szkody górnicze.</span></li>
         </ul>
         <a class="uslugi-wiecej" href="#sprawy">Szczegóły każdej sprawy ↓</a>
@@ -244,7 +244,7 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
           <div class="zaufanie"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3z"/></svg>Twoje dane są bezpieczne</span><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Bez zobowiązań - po rozmowie to Ty decydujesz</span></div>
         </form>
         <div class="ja">
-          <div class="foto"><img src="img/dominik-twarz.webp" width="160" height="160" alt="Dominik Rogowski"></div>
+          <div class="foto"><img src="img/dominik-avatar.webp" width="240" height="240" alt="Dominik Rogowski"></div>
           <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu.</p>
         </div>
         <div class="dzieki" id="dzieki" tabindex="-1">
@@ -267,12 +267,12 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
       <article class="sprawa">
         <div class="etyk">Służebność przesyłu</div>
         <h3>Słup, linia albo gazociąg na Twojej działce</h3>
-        <p>Firma energetyczna albo gazowa korzysta z Twojego gruntu. Należy się za to wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, do 6 lat wstecz. Nie zwlekaj - w 2028 r. możliwe jest zasiedzenie służebności, a wtedy możesz stracić prawo do wynagrodzenia.</p>
+        <p>Firma energetyczna albo gazowa korzysta z Twojego gruntu. Należą Ci się za to trzy rzeczy: wynagrodzenie na przyszłość, zapłata za bezumowne korzystanie do 6 lat wstecz i wynagrodzenie za obniżenie wartości nieruchomości. Nie zwlekaj - w 2028 r. możliwe jest zasiedzenie służebności, a wtedy możesz stracić prawo do wynagrodzenia.</p>
         <p class="zr">Wysokość zależy od wielkości i długości infrastruktury na działce oraz wartości gruntu. Orzecznictwo jest dziś dla właścicieli korzystniejsze niż wcześniej (TK, 2.12.2025, sygn. P 10/16; SN, 19.03.2026, sygn. II CSKP 1045/24).</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Sankcja kredytu darmowego</div>
-        <h3>Kredyt gotówkowy, ratalny albo konsolidacyjny</h3>
+        <h3>Kredyt gotówkowy, na raty w sklepie albo konsolidacyjny</h3>
         <p>Jeśli bank popełnił w umowie błąd, który przewiduje ustawa, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. W Polsce szacuje się, że wadliwych umów kredytowych jest kilka milionów.</p>
         <p>Kredyt już spłacony? Pomagamy też odzyskać skredytowane koszty - do 5 lat od spłaty umowy.</p>
         <p class="zr">Podstawa: art. 45 ustawy o kredycie konsumenckim. Czy błąd jest, wychodzi dopiero po analizie konkretnej umowy.</p>
@@ -281,7 +281,7 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
         <div class="etyk">Kredyty walutowe</div>
         <h3>Kredyt we frankach, euro albo dolarach</h3>
         <p>Umowy kredytów powiązanych z walutą obcą często zawierały niedozwolone klauzule przeliczeniowe. Sprawdzam, czy Twoją umowę da się podważyć - także gdy kredyt jest już spłacony.</p>
-        <p class="zr">CHF, EUR, USD. Wynik zależy od zapisów konkretnej umowy.</p>
+        <p class="zr">CHF, EUR, USD. Banki sprzedawały takie kredyty mniej więcej do 2013 r. Wynik zależy od zapisów konkretnej umowy, nie od waluty ani roku podpisania.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Odsetki od kosztów kredytu</div>
@@ -304,7 +304,8 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
       <article class="sprawa">
         <div class="etyk">Świadczenie wspierające</div>
         <h3>Pieniądze dla osoby z niepełnosprawnością</h3>
-        <p>Comiesięczne świadczenie dla osób pełnoletnich, zależne od liczby punktów w decyzji o poziomie potrzeby wsparcia. Pomagam przejść przez całą procedurę.</p>
+        <p>Comiesięczne świadczenie dla osób pełnoletnich, od 792 zł do 4 353 zł, zależnie od liczby punktów w decyzji o poziomie potrzeby wsparcia. Od 2026 r. liczy się już od 70 punktów. Pomagam przejść przez całą procedurę.</p>
+        <p class="zr">Kwoty to 40-220% renty socjalnej, obowiązują od 1 marca 2026 r.</p>
       </article>
     </div>
   </div>

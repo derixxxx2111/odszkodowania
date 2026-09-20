@@ -86,9 +86,8 @@ h2{font-family:var(--font-tytul);font-weight:600;font-size:clamp(23px,4.2vw,30px
 
 /* KTO PROWADZI */
 .kto{display:flex;gap:16px;align-items:center;background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px}
-.kto .foto{width:64px;height:64px;border-radius:50%;overflow:hidden;flex:0 0 64px;background:var(--tlo-2)}
-/* Kadr twarzy siedzi nisko w pliku zrodlowym - podnosimy go w okraglym wycieciu. */
-.kto .foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.2) translateY(-6%)}
+.kto .foto{width:76px;height:76px;border-radius:50%;overflow:hidden;flex:0 0 76px;background:var(--tlo-2)}
+.kto .foto img{width:100%;height:100%;object-fit:cover}
 .kto p{font-size:16px;color:var(--szary)}
 .kto b{display:block;color:var(--tekst);font-weight:650}
 
@@ -125,7 +124,7 @@ footer p{margin-bottom:8px}
       </div>
       <div class="krok">
         <h3>Sprawdzam Twoją sprawę</h3>
-        <p>Zadam kilka pytań i powiem, czy sprawa się kwalifikuje. Jeśli nie widzę podstawy, usłyszysz to od razu. Konsultacja jest bezpłatna.</p>
+        <p>Zadam kilka pytań i powiem, czy sprawa się kwalifikuje. Jeśli nie widzę podstawy, usłyszysz to od razu. Konsultacja jest <b>bezpłatna</b>.</p>
       </div>
     </div>
   </div>
@@ -150,7 +149,7 @@ footer p{margin-bottom:8px}
         <ul>
           <li>umowa kredytu, także już spłaconego</li>
           <li>informacja o dacie podpisania i dacie spłaty</li>
-          <li>rodzaj: gotówkowy, ratalny, konsolidacyjny, walutowy</li>
+          <li>rodzaj: gotówkowy, hipoteczny, konsolidacyjny, walutowy</li>
         </ul>
       </div>
     </div>
@@ -167,22 +166,22 @@ footer p{margin-bottom:8px}
       <article class="sprawa">
         <div class="etyk">Służebność przesyłu</div>
         <h3>Słup, linia albo gazociąg na działce</h3>
-        <p>Należy się wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, do 6 lat wstecz. W 2028 r. możliwe jest zasiedzenie służebności, a wtedy można stracić prawo do wynagrodzenia.</p>
+        <p>Trzy rzeczy naraz: wynagrodzenie na przyszłość, zapłata za bezumowne korzystanie do 6 lat wstecz i wynagrodzenie za obniżenie wartości nieruchomości. W 2028 r. możliwe jest zasiedzenie służebności, a wtedy można stracić prawo do wynagrodzenia.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Sankcja kredytu darmowego</div>
-        <h3>Kredyt gotówkowy, ratalny albo konsolidacyjny</h3>
-        <p>Jeśli bank popełnił w umowie błąd przewidziany w ustawie, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. Kredyt w trakcie spłaty też się liczy: po wygranej spada rata. Kredyt już spłacony - masz na to rok od spłaty.</p>
+        <h3>Kredyt gotówkowy, na raty w sklepie albo konsolidacyjny</h3>
+        <p>Jeśli bank popełnił w umowie błąd przewidziany w ustawie, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. Szacuje się, że w Polsce wadliwych umów kredytowych są miliony. Kredyt w trakcie spłaty też się liczy: po wygranej spada rata. Kredyt już spłacony - masz na to rok od spłaty.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Kredyty walutowe</div>
         <h3>Kredyt we frankach, euro albo dolarach</h3>
-        <p>Umowy powiązane z walutą obcą często zawierały niedozwolone klauzule przeliczeniowe. Liczy się treść konkretnej umowy, nie waluta ani rok podpisania. Sprawdzam także kredyty już spłacone.</p>
+        <p>Umowy powiązane z walutą obcą często zawierały niedozwolone klauzule przeliczeniowe. Banki sprzedawały takie kredyty mniej więcej do 2013 r. Liczy się treść konkretnej umowy, nie waluta ani rok podpisania. Sprawdzam także kredyty już spłacone.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Odsetki od kosztów kredytu</div>
         <h3>Bank naliczał odsetki od prowizji i ubezpieczenia</h3>
-        <p>Jeśli prowizja albo składka ubezpieczenia były doliczone do kredytu, bank nie mógł pobierać od nich odsetek. To, co pobrał, podlega zwrotowi - także przy kredycie już spłaconym, do 5 lat od spłaty umowy. Podstawa: wyrok TSUE z 23 kwietnia 2026 r., sygn. C-744/24.</p>
+        <p>Jeśli prowizja albo składka ubezpieczenia były doliczone do kredytu, bank nie mógł pobierać od nich odsetek. To, co pobrał, podlega zwrotowi - także przy kredycie już spłaconym, do 5 lat od spłaty umowy.</p>
       </article>
       <article class="sprawa">
         <div class="etyk">Wypadki</div>
@@ -197,7 +196,7 @@ footer p{margin-bottom:8px}
       <article class="sprawa">
         <div class="etyk">Świadczenie wspierające</div>
         <h3>Pieniądze dla osoby z niepełnosprawnością</h3>
-        <p>Comiesięczne świadczenie dla osób pełnoletnich, zależne od liczby punktów w decyzji o poziomie potrzeby wsparcia. Pomagam przejść przez całą procedurę.</p>
+        <p>Comiesięczne świadczenie dla osób pełnoletnich, od 792 zł do 4 353 zł, zależnie od liczby punktów w decyzji o poziomie potrzeby wsparcia. Od 2026 r. liczy się już od 70 punktów. Pomagam przejść przez całą procedurę.</p>
       </article>
     </div>
   </div>
@@ -206,7 +205,7 @@ footer p{margin-bottom:8px}
 <section class="szare">
   <div class="wrap">
     <div class="kto">
-      <span class="foto"><img src="img/dominik-twarz.webp" width="64" height="64" alt="Dominik Rogowski"></span>
+      <span class="foto"><img src="img/dominik-avatar.webp" width="76" height="76" alt="Dominik Rogowski"></span>
       <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., firma odszkodowawcza notowana na warszawskiej giełdzie, z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu do końca sprawy.</p>
     </div>
   </div>
