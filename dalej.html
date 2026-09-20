@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Co będzie dalej - Dominik Rogowski</title>
+<meta name="description" content="Zostawiłeś kontakt. Tu jest to, co dzieje się dalej, co warto przygotować i czym jeszcze się zajmuję.">
+<link rel="canonical" href="https://gdzielezatwojepieniadze.pl/dalej.html">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#faf7f0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b3261e'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='19' fill='%23fff' text-anchor='middle'%3EDR%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Inter;src:url(fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;src:url(fonts/inter-ext.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Fraunces;src:url(fonts/fraunces.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Fraunces;src:url(fonts/fraunces-ext.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-02AF,U+1E00-1E9F}
+
+:root{
+  --tlo:#faf7f0; --tlo-2:#f1ece1; --tekst:#1a1a1a; --szary:#55524b; --linia:#e2dccd;
+  --akcent:#b3261e; --na-akcencie:#fff; --akcent-tekst:#9c2019;
+  --karta:#fff; --promien:10px;
+  --font-tytul:Fraunces,Georgia,serif; --font:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*:before,*:after{box-sizing:border-box}
+*{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{font-family:var(--font);background:var(--tlo);color:var(--tekst);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--akcent);outline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+.tytul{font-family:var(--font-tytul);font-weight:600;letter-spacing:-.015em;line-height:1.08}
+.kicker{font-size:13px;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--akcent-tekst);margin-bottom:12px}
+
+/* GORA */
+.gora{padding:44px 0 32px;text-align:center}
+.znak{width:58px;height:58px;margin:0 auto 20px;border-radius:50%;background:var(--akcent);color:var(--na-akcencie);display:flex;align-items:center;justify-content:center}
+.znak svg{width:30px;height:30px}
+.gora h1{font-size:clamp(30px,6.4vw,44px);margin-bottom:12px}
+.gora .pod{color:var(--szary);max-width:34em;margin:0 auto}
+
+/* SEKCJE */
+section{padding:34px 0}
+section.szare{background:var(--tlo-2);border-top:1px solid var(--linia);border-bottom:1px solid var(--linia)}
+h2{font-family:var(--font-tytul);font-weight:600;font-size:clamp(23px,4.2vw,30px);line-height:1.15;letter-spacing:-.01em;margin-bottom:6px}
+.wstep{color:var(--szary);margin-bottom:22px}
+
+/* KROKI */
+.kroki{display:grid;gap:14px;counter-reset:k}
+.krok{background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px 18px 62px;position:relative}
+.krok:before{counter-increment:k;content:counter(k);position:absolute;left:18px;top:17px;width:30px;height:30px;border-radius:50%;background:var(--akcent);color:var(--na-akcencie);font:650 16px/30px var(--font);text-align:center}
+.krok h3{font-size:18px;font-weight:650;margin-bottom:4px}
+.krok p{color:var(--szary);font-size:16px}
+.krok b{color:var(--tekst)}
+
+/* LISTA PRZYGOTOWANIA */
+.przyg{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:720px){.przyg{grid-template-columns:1fr 1fr}}
+.przyg div{background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px}
+.przyg h3{font-size:16px;font-weight:650;margin-bottom:10px}
+.przyg ul{list-style:none;font-size:16px;color:var(--szary)}
+.przyg li{padding-left:20px;position:relative;margin-bottom:6px}
+.przyg li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--akcent)}
+.luzno{margin-top:16px;color:var(--szary);font-size:16px}
+
+/* SPRAWY */
+.sprawy{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:720px){.sprawy{grid-template-columns:1fr 1fr}}
+.sprawa{background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px}
+.sprawa .etyk{font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--akcent-tekst);margin-bottom:8px}
+.sprawa h3{font-size:17px;font-weight:650;margin-bottom:6px;line-height:1.3}
+.sprawa p{font-size:16px;color:var(--szary)}
+
+/* KONIEC */
+.koniec{text-align:center;padding:40px 0 44px}
+.koniec h2{margin-bottom:10px}
+.koniec p{color:var(--szary);max-width:32em;margin:0 auto 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:var(--promien);font:650 17px/1 var(--font);text-decoration:none;border:2px solid transparent;cursor:pointer;background:var(--akcent);color:var(--na-akcencie)}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:20px;height:20px;flex:0 0 20px}
+.wroc{display:inline-block;margin-top:18px;font-size:16px;color:var(--akcent-tekst)}
+
+/* KTO PROWADZI */
+.kto{display:flex;gap:16px;align-items:center;background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px}
+.kto img{width:64px;height:64px;border-radius:50%;flex:0 0 64px;object-fit:cover}
+.kto p{font-size:16px;color:var(--szary)}
+.kto b{display:block;color:var(--tekst);font-weight:650}
+
+footer{background:var(--tlo-2);border-top:1px solid var(--linia);padding:30px 0;color:var(--szary);font-size:15px}
+footer a{color:var(--akcent-tekst)}
+footer p{margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<header class="gora">
+  <div class="wrap">
+    <div class="znak" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></div>
+    <h1 class="tytul">Mam Twoje zgłoszenie.</h1>
+    <p class="pod">Teraz nic nie musisz robić. Poniżej opisałem, co dzieje się dalej i czego możesz ode mnie oczekiwać.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Co teraz</div>
+    <h2 class="tytul">Trzy rzeczy, w tej kolejności</h2>
+    <p class="wstep">Pierwsza dzieje się w ciągu kilku minut.</p>
+    <div class="kroki">
+      <div class="krok">
+        <h3>SMS z potwierdzeniem</h3>
+        <p>Przyjdzie od nadawcy <b>D.Rogowski</b>. To ja - nie kasuj go jako spam.</p>
+      </div>
+      <div class="krok">
+        <h3>Telefon ode mnie</h3>
+        <p>Zadzwonię z numeru komórkowego, którego nie masz w kontaktach. <b>Odbierz nieznany numer</b> w najbliższych dniach. Nie umawiam godziny na sztywno, bo nie chcę jej zmyślać.</p>
+      </div>
+      <div class="krok">
+        <h3>Krótka rozmowa</h3>
+        <p>Zadam kilka pytań i powiem, czy widzę podstawę. Jeśli nie widzę, usłyszysz to od razu - zanim cokolwiek podpiszesz. Rozmowa nic nie kosztuje i do niczego Cię nie zobowiązuje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="szare">
+  <div class="wrap">
+    <div class="kicker">Zanim zadzwonię</div>
+    <h2 class="tytul">Co warto mieć pod ręką</h2>
+    <p class="wstep">Rozmowa pójdzie szybciej, ale niczego nie wymagam. Zadzwonię tak czy inaczej.</p>
+    <div class="przyg">
+      <div>
+        <h3>Jeśli sprawa dotyczy działki</h3>
+        <ul>
+          <li>numer działki albo sam adres</li>
+          <li>co na niej stoi: słup, linia, gazociąg</li>
+          <li>zdjęcie z daleka, żeby było widać całość</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Jeśli sprawa dotyczy kredytu</h3>
+        <ul>
+          <li>umowa kredytu, także już spłaconego</li>
+          <li>data podpisania i data spłaty</li>
+          <li>rodzaj: gotówkowy, ratalny, konsolidacyjny, walutowy</li>
+        </ul>
+      </div>
+    </div>
+    <p class="luzno">Nie musisz wiedzieć, co to za urządzenie ani który zapis w umowie jest wadliwy. Od tego jestem ja.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">W czym jeszcze pomagam</div>
+    <h2 class="tytul">Zajmuję się nie tylko tym, z czym do mnie trafiłeś</h2>
+    <p class="wstep">Jeśli coś z tej listy dotyczy Ciebie albo kogoś z rodziny, powiedz mi o tym w rozmowie. Sprawdzenie nic nie kosztuje, a jedna rozmowa może zamknąć kilka spraw naraz.</p>
+    <div class="sprawy">
+      <article class="sprawa">
+        <div class="etyk">Służebność przesyłu</div>
+        <h3>Słup, linia albo gazociąg na działce</h3>
+        <p>Należy się wynagrodzenie na przyszłość i zapłata za bezumowne korzystanie, do 6 lat wstecz. W 2028 r. możliwe jest zasiedzenie służebności, a wtedy można stracić prawo do wynagrodzenia.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Sankcja kredytu darmowego</div>
+        <h3>Kredyt gotówkowy, ratalny albo konsolidacyjny</h3>
+        <p>Jeśli bank popełnił w umowie błąd przewidziany w ustawie, oddajesz tylko pożyczony kapitał - bez odsetek i prowizji. Kredyt w trakcie spłaty też się liczy: po wygranej spada rata.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Kredyty walutowe</div>
+        <h3>Kredyt we frankach, euro albo dolarach</h3>
+        <p>Umowy powiązane z walutą obcą często zawierały niedozwolone klauzule przeliczeniowe. Sprawdzam, czy da się je podważyć - także przy kredycie już spłaconym.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Koszty kredytu</div>
+        <h3>Kredyt spłacony przed terminem</h3>
+        <p>Przy wcześniejszej spłacie bank powinien oddać proporcjonalną część kosztów, także prowizji pobranej na starcie. Często tego nie robi. Skredytowane koszty odzyskujemy do 5 lat od spłaty umowy.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Wypadki</div>
+        <h3>Szkoda na zdrowiu po wypadku</h3>
+        <p>Obrażenia po wypadku komunikacyjnym, w pracy albo w innym zdarzeniu. Sprawdzam, czy należy się odszkodowanie i zadośćuczynienie. Dotyczy szkód na osobie, nie na pojeździe.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Szkody górnicze</div>
+        <h3>Dom albo działka na terenie wydobycia</h3>
+        <p>Pęknięcia ścian, przechylony budynek, osiadanie albo podtapianie gruntu przez działalność kopalni. Liczy się związek szkody z ruchem zakładu górniczego.</p>
+      </article>
+      <article class="sprawa">
+        <div class="etyk">Świadczenie wspierające</div>
+        <h3>Pieniądze dla osoby z niepełnosprawnością</h3>
+        <p>Comiesięczne świadczenie dla osób pełnoletnich, zależne od liczby punktów w decyzji o poziomie potrzeby wsparcia. Wniosek można też złożyć samodzielnie i za darmo - mówię o tym każdemu.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="szare">
+  <div class="wrap">
+    <div class="kto">
+      <img src="img/dominik-twarz.webp" width="64" height="64" alt="Dominik Rogowski">
+      <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., firma odszkodowawcza notowana na warszawskiej giełdzie, z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu do końca sprawy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="koniec">
+  <div class="wrap">
+    <h2 class="tytul">Zanim oddzwonię</h2>
+    <p>Na Facebooku pokazuję konkretne przypadki: co stało na działce, czego dotyczyło roszczenie i skąd się bierze kwota. Warto zajrzeć, zanim porozmawiamy.</p>
+    <a class="btn" href="https://www.facebook.com/RogowskiSprawdzam" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+      Zobacz mój profil na Facebooku
+    </a>
+    <div><a class="wroc" href="./">Wróć na stronę główną</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Administratorem Twoich danych jest MDNDR sp. z o.o., al. Jana Pawła II 43A/37B, 01-001 Warszawa, KRS 0001027901, NIP 5273049580. Dane przetwarzam po to, żeby skontaktować się z Tobą w sprawie, o którą pytasz. Jeśli zdecydujesz się na sprawę, trafią do Votum S.A., która ją poprowadzi.</p>
+    <p>Zgodę możesz cofnąć w każdej chwili, pisząc na <a href="mailto:dominik.rogowski@votum-ds.pl">dominik.rogowski@votum-ds.pl</a>. Pełna treść: <a href="polityka-prywatnosci.html">polityka prywatności</a>.</p>
+    <p>© 2026 Dominik Rogowski</p>
+  </div>
+</footer>
+
+</body>
+</html>
