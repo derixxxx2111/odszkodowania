@@ -82,7 +82,9 @@ h2{font-family:var(--font-tytul);font-weight:600;font-size:clamp(23px,4.2vw,30px
 .btn:hover{filter:brightness(1.08)}
 .btn:active{transform:translateY(1px)}
 .btn svg{width:20px;height:20px;flex:0 0 20px}
-.wroc{display:inline-block;margin-top:18px;font-size:16px;color:var(--akcent-tekst)}
+.wroc{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;font-size:16px;color:var(--akcent-tekst)}
+.koniec p.fb{margin:20px auto 0;font-size:16px}
+.koniec p.fb a{color:var(--akcent-tekst);display:inline-block;padding:10px 0}
 
 /* KTO PROWADZI */
 .kto{display:flex;gap:16px;align-items:center;background:var(--karta);border:1px solid var(--linia);border-radius:var(--promien);padding:18px 20px}
@@ -119,8 +121,8 @@ footer p{margin-bottom:8px}
         <p>Przyjdzie od nadawcy <b>D.Rogowski</b>.</p>
       </div>
       <div class="krok">
-        <h3>Telefon ode mnie</h3>
-        <p>Dzwonię z numeru <b><a href="tel:+48799270512">799 270 512</a></b>. Zapisz go sobie, żebyś wiedział, kto dzwoni.</p>
+        <h3>Telefon w sprawie zgłoszenia</h3>
+        <p>Zadzwonię albo ktoś z mojego zespołu z Twojej okolicy. Mój numer to <b><a href="tel:+48799270512">799 270 512</a></b> - zapisz go sobie przyciskiem na dole strony.</p>
       </div>
       <div class="krok">
         <h3>Sprawdzam Twoją sprawę</h3>
@@ -132,7 +134,7 @@ footer p{margin-bottom:8px}
 
 <section class="szare">
   <div class="wrap">
-    <div class="kicker">Zanim zadzwonię</div>
+    <div class="kicker">Zanim zadzwonimy</div>
     <h2 class="tytul">Co warto mieć pod ręką</h2>
     <p class="wstep">Jeśli masz to pod ręką, rozmowa zajmie mniej czasu.</p>
     <div class="przyg">
@@ -153,7 +155,7 @@ footer p{margin-bottom:8px}
         </ul>
       </div>
     </div>
-    <p class="luzno">Nie musisz wiedzieć, co to za urządzenie ani który zapis w umowie jest wadliwy. Od tego jestem ja.</p>
+    <p class="luzno">Nie musisz wiedzieć, co to za urządzenie ani który zapis w umowie jest wadliwy. Od tego jesteśmy my.</p>
   </div>
 </section>
 
@@ -206,19 +208,20 @@ footer p{margin-bottom:8px}
   <div class="wrap">
     <div class="kto">
       <span class="foto"><img src="img/dominik-avatar.webp" width="76" height="76" alt="Dominik Rogowski"></span>
-      <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., firma odszkodowawcza notowana na warszawskiej giełdzie, z którą współpracuję. Ja jestem Twoim kontaktem od pierwszego telefonu do końca sprawy.</p>
+      <p><b>Dominik Rogowski</b>Sprawy prowadzi Votum S.A., firma odszkodowawcza notowana na warszawskiej giełdzie, z którą współpracuję. Ja albo ktoś z mojego zespołu jest Twoim kontaktem od pierwszego telefonu do końca sprawy.</p>
     </div>
   </div>
 </section>
 
 <section class="koniec">
   <div class="wrap">
-    <h2 class="tytul">Zanim oddzwonię</h2>
-    <p>Na Facebooku pokazuję konkretne przypadki: co stało na działce, czego dotyczyło roszczenie i skąd się bierze kwota. Warto zajrzeć, zanim porozmawiamy.</p>
-    <a class="btn" href="https://www.facebook.com/RogowskiSprawdzam" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
-      Zobacz mój profil na Facebooku
+    <h2 class="tytul">Zapisz mój numer</h2>
+    <p>Jedno stuknięcie i mój numer 799 270 512 trafi do Twoich kontaktów. Kiedy zadzwonię, zobaczysz moje imię, a nie nieznany numer.</p>
+    <a class="btn" href="dominik-rogowski.vcf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+      Zapisz mój numer w kontaktach
     </a>
+    <p class="fb">Konkretne przypadki pokazuję też na <a href="https://www.facebook.com/RogowskiSprawdzam" target="_blank" rel="noopener">moim profilu na Facebooku</a>.</p>
     <div><a class="wroc" href="./">Wróć na stronę główną</a></div>
   </div>
 </section>
@@ -233,5 +236,19 @@ footer p{margin-bottom:8px}
   </div>
 </footer>
 
+<script>
+// Licznik wejsc: jeden anonimowy wpis (strona + zrodlo z adresu). Bez cookies, IP i danych osobowych.
+(function(){
+  try {
+    if (location.hostname !== 'gdzielezatwojepieniadze.pl') return;
+    const q = new URLSearchParams(location.search);
+    const z = q.get('z') || [q.get('utm_source'), q.get('utm_content')].filter(Boolean).join(' / ') || (q.get('fbclid') ? 'fbclid' : '');
+    const body = JSON.stringify({ akcja: 'wejscie', strona: location.pathname.replace(/^\/+/, '').replace(/\.html$/, '') || 'index', z: z.slice(0, 100), data: new Date().toISOString() });
+    const URL_LICZNIKA = 'https://script.google.com/macros/s/AKfycbx4vyEYUEfyeYhoI5encN7krPFOYfV6ZQRQ7Us96q8meTYY9zcDGpglety3LK5-4okn0g/exec';
+    if (navigator.sendBeacon && navigator.sendBeacon(URL_LICZNIKA, new Blob([body], { type: 'text/plain;charset=utf-8' }))) return;
+    fetch(URL_LICZNIKA, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
