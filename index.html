@@ -87,6 +87,7 @@ a{color:inherit}
 .karta{background:var(--karta);color:var(--tekst);border-radius:calc(var(--promien) + 6px);padding:28px;box-shadow:0 1px 0 var(--linia),0 24px 50px -28px rgba(60,40,20,.35);border:1px solid var(--linia)}
 .karta h2{font-family:var(--font);font-size:22px;line-height:1.25;font-weight:750;text-transform:none;letter-spacing:0}
 .karta .pod{color:var(--szary);font-size:15px;margin:6px 0 20px}
+.pod-btn{color:var(--szary);font-size:15px;text-align:center;margin:8px 0 0}
 .pole{margin-bottom:14px}
 .pole label{display:block;font-size:14px;font-weight:650;margin-bottom:6px}
 .pole input{width:100%;min-height:54px;padding:0 14px;font:400 18px var(--font);color:var(--tekst);background:var(--pole);border:1.5px solid var(--pole-ramka);border-radius:calc(var(--promien) - 2px);transition:border-color .15s,box-shadow .15s}
@@ -243,8 +244,9 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
           <div class="hp" aria-hidden="true"><label for="firma">Firma</label><input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off"></div>
           <label class="zgoda"><input id="zgoda" type="checkbox" required><span>Zgadzam się na kontakt telefoniczny, SMS i mailowy w sprawie bezpłatnej konsultacji. <a href="#dane">Zasady ochrony danych</a></span></label>
           <button class="btn btn-glowny" type="submit" id="wyslij">Proszę o telefon</button>
+          <p class="pod-btn">bezpłatnie i bez zobowiązań</p>
           <div class="komunikat" id="kom" role="status" aria-live="polite"></div>
-          <div class="zaufanie"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3z"/></svg>Twoje dane są bezpieczne</span><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Bez zobowiązań - po rozmowie to Ty decydujesz</span></div>
+          <div class="zaufanie"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3z"/></svg>Twoje dane są bezpieczne</span><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z"/></svg>Po rozmowie to Ty decydujesz</span></div>
         </form>
         <div class="ja">
           <div class="foto"><img src="img/dominik-avatar.webp" width="240" height="240" alt="Dominik Rogowski"></div>
@@ -364,6 +366,7 @@ footer .stopka{margin-top:22px;display:flex;justify-content:space-between;gap:12
     <div class="przyciski">
       <a class="btn btn-glowny" href="#formularz">Proszę o telefon</a>
     </div>
+    <p class="pod-btn">bezpłatnie i bez zobowiązań</p>
   </div>
 </section>
 </main>
